@@ -1,0 +1,15 @@
+{
+  "name": "zoho-copilot-plugin",
+  "version": "1.0.0",
+  "description": "Copilot plugin to query Zoho CRM",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "axios": "^1.6.7",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "qs": "^6.12.0"
+  }
+}
