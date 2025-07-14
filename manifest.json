@@ -1,0 +1,32 @@
+{
+  "schema": "1.1",
+  "name": "Zoho Copilot Plugin",
+  "description": "Query Zoho CRM data using natural language.",
+  "capabilities": [
+    {
+      "type": "query",
+      "method": "POST",
+      "url": "https://<your-render-url>/queryZoho",
+      "input": {
+        "type": "object",
+        "properties": {
+          "query": {
+            "type": "string",
+            "description": "The natural language question"
+          }
+        },
+        "required": ["query"]
+      },
+      "output": {
+        "type": "object",
+        "properties": {
+          "results": {
+            "type": "array",
+            "items": { "type": "object" }
+          },
+          "summary": { "type": "string" }
+        }
+      }
+    }
+  ]
+}

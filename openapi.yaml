@@ -1,0 +1,33 @@
+openapi: 3.0.1
+info:
+  title: Zoho Copilot Plugin API
+  version: 1.0.0
+servers:
+  - url: https://<your-render-url>
+paths:
+  /queryZoho:
+    post:
+      summary: Query Zoho CRM
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                query:
+                  type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  summary:
+                    type: string
+                  results:
+                    type: array
+                    items:
+                      type: object
